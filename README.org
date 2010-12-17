@@ -1,0 +1,31 @@
+* Clojure JSON speeds
+Now with completely unscientific microbenchmarks.
+
+    : user=> (use 'jsontest.core)
+    : user=> (testit)            
+    : Clojure version:  1.2.0
+    : Num roundtrips:   100000
+    : 
+    : Trail:  1
+    : clj-json                               2.15
+    : clj-json-smile                         3.88
+    : clj-json w/ keywords                   2.66
+    : clj-serializer                         2.41
+    : clojure printer/reader                 6.95
+    : clojure printer/reader w/ print-dup    12.73
+    : org.danlarkin.json                     21.35
+    : clojure.contrib.json                   13.01
+    : 
+    : Trail:  2
+    : clj-json                               1.30
+    : clj-json-smile                         2.57
+    : clj-json w/ keywords                   2.36
+    : clj-serializer                         1.69
+    : clojure printer/reader                 5.98
+    : clojure printer/reader w/ print-dup    12.42
+    : org.danlarkin.json                     21.05
+    : clojure.contrib.json                   12.51
+    : 
+    : Size comparison:
+    : clj-json        223
+    : clj-json-smile  178
